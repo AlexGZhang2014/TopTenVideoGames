@@ -1,11 +1,12 @@
 class TopTenVideoGames::CLI
   
-  def call
-    puts "Here are the Top 10 Video Games from the past 90 days!"
+  def call_list
     list_games
+    specific_game
   end
   
   def list_games
+    puts "Here are the Top 10 Video Games from the past 90 days!"
     puts <<-list.gsub(/^\s+/, "")
     1. God of War - Release Date: Apr 20, 2018 - Rating: M - Publisher: Sony Interactive Entertainment - Genre(s): Action Adventure, Linear - User Score: 9.2 - Platform: PS4
     2. Ikaruga - Release Date: May 29, 2018 - Rating: E10+ - Publisher: Nicalis - Genre(s): Action, Shooter, Shoot-'Em-Up, Vertical - User Score: 8.1 - Platform: Switch
@@ -18,6 +19,10 @@ class TopTenVideoGames::CLI
     9. Donkey Kong Country: Tropical Freeze - Release Date: May 4, 2018 - Rating: E - Publisher: Nintendo - Genre(s): Action, Platformer, 2D - User Score: 8.5 - Platform: Switch
     10. Shantae and the Pirate’s Curse - Release Date: Mar 20, 2018 - Rating: E10+ - Publisher: WayForward - Genre(s): Action, Platformer, 2D - User Score: 7.9 - Platform: Switch
     list
+  end
+  
+  def specific_game
+    puts "If you want to see more in-depth information about a specific game, please enter a number 1-10."
   end
   
 end

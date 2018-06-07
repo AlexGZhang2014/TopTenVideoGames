@@ -2,4 +2,4 @@
 
 require "./lib/top_ten_video_games"
 
-TopTenVideoGames::CLI.new.call
+TopTenVideoGames::CLI.new.call_list
