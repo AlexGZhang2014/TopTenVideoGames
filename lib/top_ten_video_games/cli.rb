@@ -6,7 +6,7 @@ class TopTenVideoGames::CLI
   end
   
   def list_games
-    puts <<-list
+    puts <<-list.gsub(/^\s+/, "")
     1. God of War - Release Date: Apr 20, 2018 - Rating: M - Publisher: Sony Interactive Entertainment - Genre(s): Action Adventure, Linear - User Score: 9.2 - Platform: PS4
     2. Ikaruga - Release Date: May 29, 2018 - Rating: E10+ - Publisher: Nicalis - Genre(s): Action, Shooter, Shoot-'Em-Up, Vertical - User Score: 8.1 - Platform: Switch
     3. Owlboy - Release Date: Apr 10, 2018 - Rating: E10+ - Publisher: Soedesco - Genre(s): Action Adventure, General - User Score: 6.6 - Platform: PS4
