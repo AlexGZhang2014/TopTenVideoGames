@@ -44,16 +44,16 @@ class TopTenVideoGames::CLI
       puts "http://www.metacritic.com/game/xbox-one/hellblade-senuas-sacrifice"
     elsif input == "7"
       puts "Go to this webpage to view more info on this game."
-      puts ""
+      puts "http://www.metacritic.com/game/pc/the-elder-scrolls-online-summerset"
     elsif input == "8"
       puts "Go to this webpage to view more info on this game."
-      puts "http://www.metacritic.com/game/switch/ikaruga"
+      puts "http://www.metacritic.com/game/playstation-4/dark-souls-remastered"
     elsif input == "9"
       puts "Go to this webpage to view more info on this game."
-      puts "http://www.metacritic.com/game/switch/ikaruga"
+      puts "http://www.metacritic.com/game/switch/donkey-kong-country-tropical-freeze"
     elsif input == "10"
       puts "Go to this webpage to view more info on this game."
-      puts "http://www.metacritic.com/game/switch/ikaruga"
+      puts "http://www.metacritic.com/game/switch/shantae-and-the-pirates-curse"
   end
   
 end
