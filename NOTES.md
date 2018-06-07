@@ -27,4 +27,8 @@ Show the top 10 list (games from the most recent 90 days):
 9. Donkey Kong Country: Tropical Freeze - Release Date: May 4, 2018 - Rating: E - Publisher: Nintendo - Genre(s): Action, Platformer, 2D - User Score: 8.5 - Platform: Switch
 10. Shantae and the Pirate’s Curse - Release Date: Mar 20, 2018 - Rating: E10+ - Publisher: WayForward - Genre(s): Action, Platformer, 2D - User Score: 7.9 - Platform: Switch
 
+Ask user for input if they want to see more details about a specific game
+  This should ultimately be coded as the href attribute that will take them to a specific page in a new tab, not the main page we scraped from.
+  
+
 
