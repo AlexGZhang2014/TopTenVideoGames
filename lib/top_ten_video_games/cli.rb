@@ -54,6 +54,7 @@ class TopTenVideoGames::CLI
     elsif input == "10"
       puts "Go to this webpage to view more info on this game."
       puts "http://www.metacritic.com/game/switch/shantae-and-the-pirates-curse"
+    end
   end
   
 end
