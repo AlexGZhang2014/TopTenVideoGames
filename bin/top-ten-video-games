@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
+require "./lib/top_ten_video_games"
+
 TopTenVideoGames::CLI.new.call
