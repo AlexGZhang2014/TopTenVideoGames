@@ -23,6 +23,10 @@ class TopTenVideoGames::CLI
   
   def specific_game
     puts "If you want to see more in-depth information about a specific game, please enter a number 1-10."
+    input = gets.strip
+    if input == "1"
+      puts "Go to this webpage to view more info on this game."
+      puts "http://www.metacritic.com/game/playstation-4/god-of-war"
   end
   
 end
