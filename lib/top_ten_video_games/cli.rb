@@ -22,9 +22,9 @@ class TopTenVideoGames::CLI
   end
   
   def specific_game
-    puts "If you want to see more in-depth information about a specific game, please enter a number 1-10."
+    puts "If you want to see more in-depth information about a specific game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
     input = nil
-    while input != "exit"
+    until input == "exit"
       input = gets.strip
       if input == "1"
         puts "Go to this webpage to view more info on this game."
@@ -57,7 +57,7 @@ class TopTenVideoGames::CLI
         puts "Go to this webpage to view more info on this game."
         puts "http://www.metacritic.com/game/switch/shantae-and-the-pirates-curse"
       elsif input == "exit"
-        puts "Goodbye!"
+        puts "Thank you for using this app. Goodbye!"
       else
         puts "That is not a valid input. Please enter a number 1-10 to see more in-depth info on a particular game."
       end
