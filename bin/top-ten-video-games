@@ -1,4 +1,3 @@
 #!/usr/bin/env ruby
 
-#test
-puts "Hello World"
+TopTenVideoGames::CLI.new.call
