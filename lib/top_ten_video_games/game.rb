@@ -4,6 +4,12 @@ require 'open-uri'
 class TopTenVideoGames::Game
   attr_accessor :name, :release_date, :rating, :publisher, :genre, :user_score, :platform
   
+  @@all = []
+  
+  def self.all
+    @@all
+  end
+  
   doc = Nokogiri::HTML(open(http://www.metacritic.com/browse/games/score/metascore/90day/all/filtered?view=detailed))
   games = doc.css("li.product.has_small_image") #Should return all games
   
