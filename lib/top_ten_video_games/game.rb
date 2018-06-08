@@ -10,10 +10,9 @@ class TopTenVideoGames::Game
     @@all
   end
   
-  doc = Nokogiri::HTML(open(http://www.metacritic.com/browse/games/score/metascore/90day/all/filtered?view=detailed))
-  games = doc.css("li.product.has_small_image") #Should return all games
-  
-  def self.scrape
+  def self.scrape_games
+    doc = Nokogiri::HTML(open(http://www.metacritic.com/browse/games/score/metascore/90day/all/filtered?view=detailed))
+    games = doc.css("li.product.has_small_image") #Should return all games
     games.each.with_index do |game, i|
       until i == 10
         game = self.new
@@ -42,6 +41,7 @@ class TopTenVideoGames::Game
   end
   
   def self.list
+    self.scrape_games
     self.all.each.with_index do |game, i|
       puts "#{i+1}. #{game.name} - Release Date: #{game.release_date} - Rating: #{game.rating} - Publisher: #{game.publisher} - Genre(s): #{game.genre} - User Score: #{game.user_score} - Platform: #{game.platform}"
     end
