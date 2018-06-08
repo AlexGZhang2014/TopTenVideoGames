@@ -17,12 +17,12 @@ class TopTenVideoGames::Game
       until i == 10
         game = self.new
         game.name = games.css("h3.product_title a").text
-        game.release_date = #scraped release date
-        game.rating = #scraped rating
-        game.publisher = #scraped publisher
-        game.genre = #scraped genre(s)
-        game.user_score = #scraped user score
-        game.platform = #scraped platform
+        game.release_date = games.css("div.more_stats li.release_date span.data").text
+        game.rating = games.css("div.more_stats li.maturity_rating span.data").text
+        game.publisher = games.css("div.more_stats li.publisher span.data").text
+        game.genre = games.css("div.more_stats li.genre span.data").text
+        game.user_score = games.css("div.more_stats li.product_avguserscore span.data").text
+        game.platform = games.css("div.more_stats li.platform_list span.data a").text
         self.all << game
       end
     end
