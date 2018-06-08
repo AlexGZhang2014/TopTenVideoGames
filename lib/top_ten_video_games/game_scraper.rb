@@ -1,0 +1,3 @@
+class TopTenVideoGames::GameScraper
+  
+end
