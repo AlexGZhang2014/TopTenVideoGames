@@ -17,7 +17,7 @@ class TopTenVideoGames::Game
   end
   
   def initialize #The nils will be replaced with appropriate scraping code
-    self.name = nil
+    self.name = games.css("h3.product_title a").text
     self.release_date = nil
     self.rating = nil
     self.publisher = nil
