@@ -13,18 +13,23 @@ class TopTenVideoGames::Game
   doc = Nokogiri::HTML(open(http://www.metacritic.com/browse/games/score/metascore/90day/all/filtered?view=detailed))
   games = doc.css("li.product.has_small_image") #Should return all games
   
-  def scrape
-    games_array = [] #This should hold all new Game instances
+  def self.scrape
     games.each.with_index do |game, i|
       until i == 10
         game = Game.new
-        games_array << game
+        game.name = #scraped name
+        game.release_date = #scraped release date
+        game.rating = #scraped rating
+        game.publisher = #scraped publisher
+        game.genre = #scraped genre(s)
+        game.user_score = #scraped user score
+        game.platform = #scraped platform
+        self.all << game
       end
     end
-    games_array
   end
   
-  #name = games.css("h3.product_title a").text
+  #game_name = games.css("h3.product_title a").text
   
   def initialize #The nils will be replaced with appropriate scraping code
     @name = nil
