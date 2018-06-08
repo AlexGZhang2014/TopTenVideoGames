@@ -2,7 +2,7 @@ require 'open-uri'
 
 class TopTenVideoGames::GameScraper
   doc = Nokogiri::HTML(open(http://www.metacritic.com/browse/games/score/metascore/90day/all/filtered?view=detailed))
-  games = doc.css("ol.list_products")
+  games = doc.css("li.product.has_small_image")
   
   def scrape
     games_array = []
