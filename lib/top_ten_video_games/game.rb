@@ -16,7 +16,7 @@ class TopTenVideoGames::Game
     games.each.with_index do |game, i|
       until i == 10
         game = self.new
-        game.name = #scraped name
+        game.name = games.css("h3.product_title a").text
         game.release_date = #scraped release date
         game.rating = #scraped rating
         game.publisher = #scraped publisher
@@ -27,8 +27,6 @@ class TopTenVideoGames::Game
       end
     end
   end
-  
-  #game_name = games.css("h3.product_title a").text
   
   def initialize #The nils will be replaced with appropriate scraping code
     @name = nil
