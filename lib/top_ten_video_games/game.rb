@@ -16,7 +16,7 @@ class TopTenVideoGames::Game
   def self.scrape
     games.each.with_index do |game, i|
       until i == 10
-        game = Game.new
+        game = self.new
         game.name = #scraped name
         game.release_date = #scraped release date
         game.rating = #scraped rating
@@ -40,5 +40,12 @@ class TopTenVideoGames::Game
     @user_score = nil
     @platform = nil
   end
+  
+  def self.list
+    self.all.each do |game|
+      puts "1. God of War - Release Date: Apr 20, 2018 - Rating: M - Publisher: Sony Interactive Entertainment - Genre(s): Action Adventure, Linear - User Score: 9.2 - Platform: PS4"
+    end
+  end
+    
   
 end
