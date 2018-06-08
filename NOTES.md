@@ -22,8 +22,8 @@ Show the top 10 list (games from the most recent 90 days):
 4. Pillars of Eternity II: Deadfire - Release Date: May 8, 2018 - Rating: M - Publishers: Obsidian Entertainment, Versus Evil - Genre(s): Role-Playing, Western-Style - User Score: 7.8 - Platform: PC
 5. Injustice 2: Legendary Edition - Release Date: Mar 27, 2018 - Publisher: Warner Bros. Interactive Entertainment - Genre(s): Action, 2D, Fighting - User Score: 7.4 - Platform: PS4
 6. Hellblade: Senua’s Sacrifice - Release Date: Apr 11, 2018 - Rating: M - Publisher: Ninja Theory - Genre(s): Action Adventure, General - User Score: 8.0 - Platform: XONE
-7. Dark Souls Remastered - Release Date: May 25, 2018 - Rating: M - Publisher: Bandai Namco Games - Genre(s): Role-Playing, Action RPG - User Score: 6.0 - Platform: PS4
-8. Donkey Kong Country: Tropical Freeze - Release Date: May 4, 2018 - Rating: E - Publisher: Nintendo - Genre(s): Action, Platformer, 2D - User Score: 8.5 - Platform: Switch
+7. Donkey Kong Country: Tropical Freeze - Release Date: May 4, 2018 - Rating: E - Publisher: Nintendo - Genre(s): Action, Platformer, 2D - User Score: 8.5 - Platform: Switch
+8. Dark Souls Remastered - Release Date: May 25, 2018 - Rating: M - Publisher: Bandai Namco Games - Genre(s): Role-Playing, Action RPG - User Score: 6.0 - Platform: PS4
 9. Shantae and the Pirate’s Curse - Release Date: Mar 20, 2018 - Rating: E10+ - Publisher: WayForward - Genre(s): Action, Platformer, 2D - User Score: 7.9 - Platform: Switch
 10. The Elder Scrolls Online: Summerset - Release Date: May 21, 2018 - Rating: M - Publisher: Bethesda Softworks - User Score: 8.1 - Platform: PC
 
