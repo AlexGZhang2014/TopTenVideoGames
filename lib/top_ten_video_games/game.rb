@@ -1,12 +1,12 @@
 class TopTenVideoGames::Game
   def initialize
-    self.name
-    self.release_date
-    self.rating
-    self.publisher
-    self.genre
-    self.user_score
-    self.platform
+    self.name = nil
+    self.release_date = nil
+    self.rating = nil
+    self.publisher = nil
+    self.genre = nil
+    self.user_score = nil
+    self.platform = nil
   end
   
 end
