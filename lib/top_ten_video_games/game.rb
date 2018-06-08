@@ -42,8 +42,8 @@ class TopTenVideoGames::Game
   end
   
   def self.list
-    self.all.each do |game|
-      puts "1. God of War - Release Date: Apr 20, 2018 - Rating: M - Publisher: Sony Interactive Entertainment - Genre(s): Action Adventure, Linear - User Score: 9.2 - Platform: PS4"
+    self.all.each.with_index do |game, i|
+      puts "#{i+1}. #{game.name} - Release Date: #{game.release_date} - Rating: #{game.rating} - Publisher: #{game.publisher} - Genre(s): #{game.genre} - User Score: #{game.user_score} - Platform: #{game.platform}"
     end
   end
     
