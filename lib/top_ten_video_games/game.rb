@@ -16,14 +16,16 @@ class TopTenVideoGames::Game
     games_array
   end
   
+  #name = games.css("h3.product_title a").text
+  
   def initialize #The nils will be replaced with appropriate scraping code
-    self.name = games.css("h3.product_title a").text
-    self.release_date = nil
-    self.rating = nil
-    self.publisher = nil
-    self.genre = nil
-    self.user_score = nil
-    self.platform = nil
+    @name = nil
+    @release_date = nil
+    @rating = nil
+    @publisher = nil
+    @genre = nil
+    @user_score = nil
+    @platform = nil
   end
   
 end
