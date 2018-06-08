@@ -2,7 +2,7 @@ require 'nokigiri'
 require 'open-uri'
 
 class TopTenVideoGames::Game
-  attr_accessor :name, :release_date, :rating, :publisher, :genre, :user_score, :platform
+  attr_accessor :name, :url, :release_date, :rating, :publisher, :genre, :user_score, :platform
   
   @@all = []
   
@@ -17,6 +17,7 @@ class TopTenVideoGames::Game
       until i == 10
         game = self.new
         game.name = games.css("h3.product_title a").text
+        game.url = games.css("h3.product_title a").attr("href")
         game.release_date = games.css("div.more_stats li.release_date span.data").text
         game.rating = games.css("div.more_stats li.maturity_rating span.data").text
         game.publisher = games.css("div.more_stats li.publisher span.data").text
@@ -30,6 +31,7 @@ class TopTenVideoGames::Game
   
   def initialize #The nils will be replaced with appropriate scraping code
     @name = nil
+    @url = nil
     @release_date = nil
     @rating = nil
     @publisher = nil
