@@ -1,3 +1,5 @@
+require_relative "../../config/environment.rb"
+
 class TopTenVideoGames::Game
   attr_accessor :name, :url, :release_date, :rating, :publisher, :genre, :user_score, :platform
   
