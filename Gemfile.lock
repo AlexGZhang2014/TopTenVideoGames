@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     top_ten_video_games (0.1.0)
-      nokogiri
 
 GEM
   remote: https://rubygems.org/

@@ -1,6 +1,8 @@
 class Scraper
   def self.scrape_games
+    
     doc = Nokogiri::HTML(open("https://www.ranker.com/list/most-popular-video-games-today/ranker-games"))
+    
     games = doc.css("h2.listItem") #Should return all games
     games.each do |game|
       new_game = Game.new

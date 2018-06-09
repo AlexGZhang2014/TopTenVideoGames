@@ -7,7 +7,7 @@ class GameCLI
   
   def list_games
     puts "Here are the Top 10 Video Games Today!"
-    Game.list
+    @games = Game.list
   end
   
   def specific_game
