@@ -25,20 +25,12 @@ class Game
         index += 1
       end
     end
-      #new_game = self.new
-      #new_game.name = games.css("a.listItem__title").text
-      #new_game.url = games.css("a.listItem__title").attr("href").text
-      #new_game.release_year = games.css("span.listItem__properties").text
-      #new_game.rank = games.css("strong.listItem__rank").text
-      #new_game.description = games.css("span.listItem__wiki").text
-      #self.all << new_game
   end
   
   def self.list
     self.scrape_games
-    puts "#{self.all}"
-    #self.all.each.with_index do |game, i|
-      #puts "#{game.rank}. #{game.name} - Release Date: #{game.release_year} - #Description: #{game.description}"
-    #end
+    self.all.each do |game|
+      puts "#{game.rank}. #{game.name} - Release Date: #{game.release_year} - Description: #{game.description}"
+    end
   end
 end
