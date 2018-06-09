@@ -11,4 +11,4 @@ require "nokogiri"
 # require "pry"
 # Pry.start
 
-TopTenVideoGames::CLI.new.call_list
+GameCLI.new.call_list

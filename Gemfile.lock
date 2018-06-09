@@ -17,6 +17,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     rake (10.5.0)
+    require_all (2.0.0)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
@@ -36,8 +37,10 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.16)
+  nokogiri
   pry
-  rake (~> 10.0)
+  rake
+  require_all
   rspec (~> 3.0)
   top_ten_video_games!
 

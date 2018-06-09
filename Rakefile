@@ -1,3 +1,4 @@
+require_relative "./config/environment.rb"
 require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 
