@@ -1,15 +1,13 @@
 require_relative "../../config/environment.rb"
 
 class Game
-  attr_accessor :name, :url, :release_date, :rating, :publisher, :genre, :user_score, :platform
+  attr_accessor :name, :rank, :release_year, :description
   
   @@all = []
   
   def self.all
     @@all
   end
-  
-  
   
   def self.list
     self.scrape_games
