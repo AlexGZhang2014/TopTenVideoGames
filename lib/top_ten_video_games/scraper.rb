@@ -1,19 +1,16 @@
 class Scraper
   def self.scrape_games
-    doc = Nokogiri::HTML(open("http://www.metacritic.com/browse/games/score/metascore/year/all/filtered?sort=desc&view=detailed"))
-    games = doc.css("li.product.has_small_image") #Should return all games
+    doc = Nokogiri::HTML(open("https://www.ranker.com/list/most-popular-video-games-today/ranker-games"))
+    games = doc.css("h2.listItem") #Should return all games
     games.each.with_index do |game, i|
       until i == 10
-        game = self.new
-        game.name = games.css("h3.product_title a").text
-        game.url = games.css("h3.product_title a").attr("href")
-        game.release_date = games.css("div.more_stats li.release_date span.data").text
-        game.rating = games.css("div.more_stats li.maturity_rating span.data").text
-        game.publisher = games.css("div.more_stats li.publisher span.data").text
-        game.genre = games.css("div.more_stats li.genre span.data").text.strip
-        game.user_score = games.css("div.more_stats li.product_avguserscore span.data").text
-        game.platform = games.css("div.more_stats li.platform_list span.data a").text
-        self.all << game
+        game = Game.new
+        game.name = games.css("a.listItem__title").text
+        game.url = games.css("a.listItem__title").attr("href")
+        game.release_date = games.css("span.listItem__properties").text
+        game.rank = games.css("strong.listItem__rank").text
+        game.description = games.css("span.listItem__wiki").text
+        Game.all << game
       end
     end
   end

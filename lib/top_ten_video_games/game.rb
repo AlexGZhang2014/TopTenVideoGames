@@ -1,7 +1,7 @@
 require_relative "../../config/environment.rb"
 
 class Game
-  attr_accessor :name, :rank, :release_year, :description
+  attr_accessor :name, :rank, :release_year, :description, :url
   
   @@all = []
   
