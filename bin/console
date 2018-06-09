@@ -2,6 +2,7 @@
 
 require "bundler/setup"
 require "top_ten_video_games"
+require "nokogiri"
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -12,3 +13,5 @@ require "top_ten_video_games"
 
 require "irb"
 IRB.start(__FILE__)
+
+TopTenVideoGames::CLI.new.call_list

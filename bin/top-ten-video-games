@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-
-require "bundler/setup"
-require "top_ten_video_games"
-
-TopTenVideoGames::CLI.new.call_list
