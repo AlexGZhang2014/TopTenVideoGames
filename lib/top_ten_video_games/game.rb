@@ -15,6 +15,4 @@ class Game
       puts "#{game.rank}. #{game.name} - Release Date: #{game.release_year} - Description: #{game.description}"
     end
   end
-    
-  
 end
