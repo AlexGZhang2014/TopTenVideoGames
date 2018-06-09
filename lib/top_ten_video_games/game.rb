@@ -11,14 +11,25 @@ class Game
   
   def self.scrape_games
     doc = Nokogiri::HTML(open("https://www.ranker.com/list/most-popular-video-games-today/ranker-games"))
-    games = doc.css("h2.listItem") #Proven to return all games
+    games = doc.css("h2.listItem") #Proven to return all 50 games
+    index = 0
+    games.each do |game|
       new_game = self.new
-      new_game.name = games.css("a.listItem__title").text
+      new_game.name = games.css("a.listItem__title")[0].text
       new_game.url = games.css("a.listItem__title").attr("href").text
-      new_game.release_year = games.css("span.listItem__properties").text
-      new_game.rank = games.css("strong.listItem__rank").text
-      new_game.description = games.css("span.listItem__wiki").text
+      new_game.release_year = games.css("span.listItem__properties")[0].text
+      new_game.rank = games.css("strong.listItem__rank")[0].text
+      new_game.description = games.css("span.listItem__wiki")[0].text
       self.all << new_game
+      index += 1
+    end
+      #new_game = self.new
+      #new_game.name = games.css("a.listItem__title").text
+      #new_game.url = games.css("a.listItem__title").attr("href").text
+      #new_game.release_year = games.css("span.listItem__properties").text
+      #new_game.rank = games.css("strong.listItem__rank").text
+      #new_game.description = games.css("span.listItem__wiki").text
+      #self.all << new_game
   end
   
   def self.list
