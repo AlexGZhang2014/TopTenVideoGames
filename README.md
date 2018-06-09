@@ -1,9 +1,5 @@
 # TopTenVideoGames
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/top_ten_video_games`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+If you are an avid gamer, then you will love this app! Run the app with "./bin/vid_game_app" to view the top 10 most popular video games as of today. Follow the instructions to find out more info on a particular game.
 
 ## Development
 
