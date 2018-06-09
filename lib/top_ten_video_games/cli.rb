@@ -29,43 +29,43 @@ class TopTenVideoGames::CLI
       input = gets.strip
       if input == "1"
         puts "Go to this webpage to view more info on this game."
-        puts "http://www.metacritic.com/game/playstation-4/god-of-war"
+        puts TopTenVideoGames::Game.all[0].url
         puts "To view more info on a different game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
       elsif input == "2"
         puts "Go to this webpage to view more info on this game."
-        puts "http://www.metacritic.com/game/switch/ikaruga"
+        puts TopTenVideoGames::Game.all[1].url
         puts "To view more info on a different game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
       elsif input == "3"
         puts "Go to this webpage to view more info on this game."
-        puts "http://www.metacritic.com/game/playstation-4/owlboy"
+        puts TopTenVideoGames::Game.all[2].url
         puts "To view more info on a different game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
       elsif input == "4"
         puts "Go to this webpage to view more info on this game."
-        puts "http://www.metacritic.com/game/pc/pillars-of-eternity-ii-deadfire"
+        puts TopTenVideoGames::Game.all[3].url
         puts "To view more info on a different game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
       elsif input == "5"
         puts "Go to this webpage to view more info on this game."
-        puts "http://www.metacritic.com/game/playstation-4/injustice-2-legendary-edition"
+        puts TopTenVideoGames::Game.all[4].url
         puts "To view more info on a different game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
       elsif input == "6"
         puts "Go to this webpage to view more info on this game."
-        puts "http://www.metacritic.com/game/xbox-one/hellblade-senuas-sacrifice"
+        puts TopTenVideoGames::Game.all[5].url
         puts "To view more info on a different game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
       elsif input == "7"
         puts "Go to this webpage to view more info on this game."
-        puts "http://www.metacritic.com/game/switch/donkey-kong-country-tropical-freeze"
+        puts TopTenVideoGames::Game.all[6].url
         puts "To view more info on a different game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
       elsif input == "8"
         puts "Go to this webpage to view more info on this game."
-        puts "http://www.metacritic.com/game/playstation-4/dark-souls-remastered"
+        puts TopTenVideoGames::Game.all[7].url
         puts "To view more info on a different game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
       elsif input == "9"
         puts "Go to this webpage to view more info on this game."
-        puts "http://www.metacritic.com/game/switch/shantae-and-the-pirates-curse"
+        puts TopTenVideoGames::Game.all[8].url
         puts "To view more info on a different game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
       elsif input == "10"
         puts "Go to this webpage to view more info on this game."
-        puts "http://www.metacritic.com/game/pc/the-elder-scrolls-online-summerset"
+        puts TopTenVideoGames::Game.all[9].url
         puts "To view more info on a different game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
       elsif input == "exit"
         puts "Thank you for using this app. Goodbye!"
