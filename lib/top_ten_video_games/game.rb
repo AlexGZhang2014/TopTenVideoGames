@@ -1,6 +1,3 @@
-require 'nokigiri'
-require 'open-uri'
-
 class TopTenVideoGames::Game
   attr_accessor :name, :url, :release_date, :rating, :publisher, :genre, :user_score, :platform
   
@@ -11,7 +8,9 @@ class TopTenVideoGames::Game
   end
   
   def self.scrape_games
-    doc = Nokogiri::HTML(open("http://www.metacritic.com/browse/games/score/metascore/90day/all/filtered?view=detailed"))
+    game_url = "http://www.metacritic.com/browse/games/score/metascore/90day/all/filtered?view=detailed"
+    content = open(game_url, ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE, 'User-Agent' => 'ruby')
+    doc = Nokogiri::HTML(content)
     games = doc.css("li.product.has_small_image") #Should return all games
     games.each.with_index do |game, i|
       until i == 10
