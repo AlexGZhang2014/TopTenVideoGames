@@ -10,9 +10,9 @@ class Game
   end
   
   def self.list
-    self.scrape_games
+    Scraper.scrape_games
     self.all.each.with_index do |game, i|
-      puts "#{i+1}. #{game.name} - Release Date: #{game.release_date} - Rating: #{game.rating} - Publisher: #{game.publisher} - Genre(s): #{game.genre} - User Score: #{game.user_score} - Platform: #{game.platform}"
+      puts "#{game.rank}. #{game.name} - Release Date: #{game.release_year} - Description: #{game.description}"
     end
   end
     

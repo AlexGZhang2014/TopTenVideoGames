@@ -7,7 +7,7 @@ class Scraper
         game = Game.new
         game.name = games.css("a.listItem__title").text
         game.url = games.css("a.listItem__title").attr("href")
-        game.release_date = games.css("span.listItem__properties").text
+        game.release_year = games.css("span.listItem__properties").text
         game.rank = games.css("strong.listItem__rank").text
         game.description = games.css("span.listItem__wiki").text
         Game.all << game
