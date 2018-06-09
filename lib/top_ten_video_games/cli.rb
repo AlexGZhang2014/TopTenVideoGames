@@ -11,12 +11,12 @@ class GameCLI
   end
   
   def specific_game
-    puts "If you want to see more in-depth information about a specific game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
+    puts "If you want to see more information about a specific game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
     input = nil
     until input == "exit"
       input = gets.strip
       if input == "1"
-        puts "Go to this webpage to view more info on this game."
+        puts Game.all[0].release_date
         puts Game.all[0].url
         puts "To view more info on a different game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
       elsif input == "2"
