@@ -14,14 +14,16 @@ class Game
     games = doc.css("h2.listItem") #Proven to return all 50 games
     index = 0
     games.each do |game|
-      new_game = self.new
-      new_game.name = games.css("a.listItem__title")[0].text
-      new_game.url = games.css("a.listItem__title").attr("href").text
-      new_game.release_year = games.css("span.listItem__properties")[0].text
-      new_game.rank = games.css("strong.listItem__rank")[0].text
-      new_game.description = games.css("span.listItem__wiki")[0].text
-      self.all << new_game
-      index += 1
+      while index < 10
+        new_game = self.new
+        new_game.name = games.css("a.listItem__title")[index].text
+        new_game.url = games.css("a.listItem__title").attr("href").text
+        new_game.release_year = games.css("span.listItem__properties")[index].text
+        new_game.rank = games.css("strong.listItem__rank")[index].text
+        new_game.description = games.css("span.listItem__wiki")[index].text
+        self.all << new_game
+        index += 1
+      end
     end
       #new_game = self.new
       #new_game.name = games.css("a.listItem__title").text
