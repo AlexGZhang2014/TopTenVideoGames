@@ -8,9 +8,7 @@ class TopTenVideoGames::Game
   end
   
   def self.scrape_games
-    game_url = "http://www.metacritic.com/browse/games/score/metascore/90day/all/filtered?view=detailed"
-    content = open(game_url, ssl_verify_mode: OpenSSL::SSL::VERIFY_NONE, 'User-Agent' => 'ruby')
-    doc = Nokogiri::HTML(content)
+    doc = Nokogiri::HTML(open("http://www.metacritic.com/browse/games/score/metascore/90day/all/filtered?view=detailed"))
     games = doc.css("li.product.has_small_image") #Should return all games
     games.each.with_index do |game, i|
       until i == 10
