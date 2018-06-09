@@ -28,17 +28,6 @@ class Game
     end
   end
   
-  def initialize #The nils will be replaced with appropriate scraping code
-    @name = nil
-    @url = nil
-    @release_date = nil
-    @rating = nil
-    @publisher = nil
-    @genre = nil
-    @user_score = nil
-    @platform = nil
-  end
-  
   def self.list
     self.scrape_games
     self.all.each.with_index do |game, i|
