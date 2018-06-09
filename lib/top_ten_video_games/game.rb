@@ -30,7 +30,7 @@ class Game
   def self.list
     self.scrape_games
     self.all.each do |game|
-      puts "#{game.rank}. #{game.name} - Release Date: #{game.release_year} - Description: #{game.description}"
+      puts "#{game.rank}. #{game.name}"
     end
   end
 end
