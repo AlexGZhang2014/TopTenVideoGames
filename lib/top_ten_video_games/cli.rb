@@ -1,13 +1,20 @@
-class GameCLI
+class TopTenVideoGames::GameCLI
   
   def call_list
+    TopTenVideoGames::GameScraper.new.scrape_games
     list_games
     specific_game
   end
   
+  def list
+    TopTenVideoGames::Game.all.each do |game|
+      puts "#{game.rank}. #{game.name}"
+    end
+  end
+  
   def list_games
     puts "Here are the Top 10 Video Games Today!"
-    @games = Game.list
+    list
   end
   
   def specific_game
@@ -17,10 +24,10 @@ class GameCLI
       input = gets.strip
       number = input.to_i
       if number > 0 && number < 11
-        puts "#{Game.all[number-1].name}"
-        puts "Release Date: #{Game.all[number-1].release_date}"
-        puts "Description: #{Game.all[number-1].description}"
-        puts "To see more in-depth information, go to this webpage: #{Game.all[number-1].url}"
+        puts "#{TopTenVideoGames::Game.all[number-1].name}"
+        puts "Release Date: #{TopTenVideoGames::Game.all[number-1].release_date}"
+        puts "Description: #{TopTenVideoGames::Game.all[number-1].description}"
+        puts "To see more in-depth information, go to this webpage: #{TopTenVideoGames::Game.all[number-1].url}"
         puts "To view more info on a different game, please enter a number 1-10. Otherwise, type \'exit\' when you are done."
       elsif input == "exit"
         puts "Thank you for using this app. Goodbye!"
