@@ -2,19 +2,9 @@
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'top_ten_video_games'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install top_ten_video_games
+1. Fork this repository
+2. Clone your fork of this repository (git clone...)
+3. Switch into your newly created directory
 
 ## Usage
 
