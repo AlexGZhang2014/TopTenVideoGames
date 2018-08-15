@@ -5,6 +5,7 @@
 1. Fork this repository
 2. Clone your fork of this repository (git clone...)
 3. Switch into your newly created directory
+4. Run "bundle install"
 
 ## Usage
 
